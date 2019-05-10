@@ -28,7 +28,7 @@ int main()
 {
 	//Create the class object to load and process the video file.
 	//set Your video file location as a string.
-	string fileNameDir = "D:/EXAMPLE_FILE.mp4"; 
+	string fileNameDir = "D:/DANCE.mp4"; //My file name is Dance.mp4
 	LoadVideo dance(fileNameDir);
 	//dance.setFrameSize(640, 480); //This is optional. If you want, you can cnahge the frame size manually. 
 									//othewise it will be half of the original frame size
