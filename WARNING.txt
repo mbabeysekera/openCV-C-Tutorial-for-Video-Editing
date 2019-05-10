@@ -1,0 +1,11 @@
+<-------------------------------------- WARNING!!! --------------------------------------------->
+
+if you are using Visual Studio, you have to change the following setting of the Visual Studio
+from the project properties.
+
+1) goto ---> Project ---> ffmpeg properties ---> C/C++ -> Advanced
+
+2) then change the "Disable Specific Warning" by editing it with the error number "4996" without
+   quotations.
+
+AFTER THAT YOU ARE GOOD TO GO WITH <time.h> functions

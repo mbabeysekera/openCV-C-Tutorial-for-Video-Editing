@@ -1,0 +1,55 @@
+ALL THE HEADER FILES AND OTHER NECESSARY FILES HAVE BEEN ATTACHED TO THE .RAR FILE. EXTRACT THE FILE AND FOLLOW
+FOLLOW THE INSTRUCTION GIVEN BELOW.
+
+1)	INSIDE THE "ffmpeg" FILE YOU WILL SEE A FILE "ffmpeg.sln". LOAD THAT FILE INTO "VISUAL STUDIO" ANY VERSION AFTER VC14 
+	RELEASE (MINE IS 2019 COMMUNITY EDITION). THEN IT WILL LOAD ALL THE STATIC LIBRARIES INCLUDING DYNAMIC HEADER FILES.
+
+2)	a.	SOFTWARE VERSIONS TO DOWNLOAD.
+				VISUAL STUDIO	- 2015 OR ANY LATEST VERSION.
+				openCV			- openCV-3.4.1
+				FFMPEG			- FFMPEG 4.1.3
+  	b.	NEXT STEP IS TO INSTALL oprnCV ON YOUR COMPUTER AND ADD THE *"C:\openCV-3.4.1\opencv\build\x64\vc14\bin" TO SYSTEM 
+			ENVIRONMENT VARIABLES "Path". (* YOUR DIRECTORIES MIGHT BE DIFFERENT FROM MINE. THERE FORE PLEASE FIND THE bin FILE
+			LOCATION WITH "...64x\vc14\bin")
+
+	c.	INSTALL FFMPEG ON YOUR PC AND ADD THE bin DIRECTORY TO THE SYSTEM ENVIRONMENT VARIABLES AS **"C:\ffmpeg\bin". (** YOUR 
+			DIRECTORIES MIGHT BE DIFFERENT FROM MINE. THERE FORE PLEASE FIND THE bin FILE LOCATION IN THE CORESPONDING FOLDER)
+				MOST OF THE TIMES FFMPEG HAS DIFFERENT FILES TO DOWNLAD.
+				THE BEST WAY IS -	*First download the "ffmpeg-4.1.3-win64-shared.zip"
+									*Then download the "ffmpeg-4.1.3-win64-dev.zip"
+									*After that put all the files into a folder in the C: drive. following list shows the file list
+									 thet should include in your FFMPEG directory.
+										- bin
+										- doc
+										- example
+										- include
+										- lib
+										- presets
+										- LICENSE.txt
+										- README.txt
+	
+3)	CONFIGURATION OF THE PROJECT FILE.
+		i.	a.	goto ---> Project ---> ffmpeg properties ---> VC++ Directories ---> Include Directories --->
+					edit ---> (load the openCV folder location)\build\inclide ---> OK.
+
+				b.	goto ---> Project ---> ffmpeg properties ---> VC++ Directories ---> Include Directories --->
+					edit ---> (load the ffmpeg folder location)\inclide ---> OK.
+
+		ii.	a.	goto ---> Project ---> ffmpeg properties ---> VC++ Directories ---> Library Directories --->
+					edit ---> (load the openCV folder location)\build\x64\vc14\lib---> OK.
+
+				b.	goto ---> Project ---> ffmpeg properties ---> VC++ Directories ---> Include Directories --->
+					edit ---> (load the ffmpeg folder location)\lib ---> OK.
+
+		iii.a.	goto ---> Project ---> ffmpeg properties ---> Linker ---> Input ---> Additional Dependencies --->
+					edit --->	avcodec.lib
+								avdevice.lib
+								avfilter.lib
+								avformat.lib
+								avutil.lib
+								postproc.lib
+								swresample.lib
+								swscale.lib
+								opencv_world346d.lib ---> OK.
+				 
+		iv.	Then Save the settings by selecting OK. 
