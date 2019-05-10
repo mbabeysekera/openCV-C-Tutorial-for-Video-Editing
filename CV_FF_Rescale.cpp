@@ -22,7 +22,6 @@
 #include <vector>
 //video processing with openCV header file
 #include "cv_Support.h" 
-//#include "ff_Support.h"
 using namespace std;
 using namespace cv;
 int main()
