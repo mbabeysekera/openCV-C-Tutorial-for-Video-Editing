@@ -13,8 +13,8 @@
 	THE PROGRAM.
 
 	Author @ BUDDHIKA ABEYSEKERA
-	Check out me on: LinkedIn	:	https://www.linkedin.com/in/babey/
-					 GitHub		:	https://github.com/mbabeysekera/
+	Check out me on: LinkedIn	:https://www.linkedin.com/in/babey/
+			 GitHub		:https://github.com/mbabeysekera/
 */
 //Include all necessary genaral header files.
 #include <iostream>
